@@ -77,7 +77,7 @@ Example
   dataDash(document.getElementsByTagName('body'), 'test'); // asdf
   DataDash('foo'); // creats methods for .dataDashFoo
   DataDash({prefix: 'bar'}); // creats methods for .dataDashBar
-  d3.selector('html').dataDashFoo('hello', {junk: 'I want to save', stuff: 42});
-  d3.selector('html').dataDashBar('hello', {junk: 'Bad junk', stuff: 12});
-  d3.selector('html').dataDashFoo('hello');
+  d3.select('html').dataDashFoo('hello', {junk: 'I want to save', stuff: 42});
+  d3.select('html').dataDashBar('hello', {junk: 'Bad junk', stuff: 12});
+  d3.select('html').dataDashFoo('hello');
   // {junk: 'I want to save', stuff: 42});
