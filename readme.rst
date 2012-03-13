@@ -40,6 +40,12 @@ opt.noMethods
 Set ``{noMethods: true}`` to prevent dataDash from attaching methods to
 D3 and jQuery.
 
+opt.stats
++++++++++
+
+Set ``{stats: true}`` to collect stats you can then get at by calling
+``.stats()`` on the dataDash object.
+
 Function Usage
 ==============
 
