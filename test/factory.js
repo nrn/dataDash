@@ -85,3 +85,22 @@ describe('Setting by mapping', function () {
   });
 });
 
+describe('Prefixed operations', function () {
+  describe('$("#test").dataDashFoo()', function () {
+    it('Should not see unprefixed attributes', function () {
+      expect($('#test').dataDashFoo()).to.eql([{}]);
+    });
+    it('Should set stuff', function () {
+      $('#test').dataDashFoo('stuff', 'asdf');
+      expect($('#test').dataDashFoo('stuff')[0]).to.equal('asdf');
+    });
+    it('Should set more stuff', function () {
+      $('#test').dataDashFoo({bar: function (ele, idx, sel) {return sel.length;}});
+      expect($('#test').dataDashFoo('bar')[0]).to.equal(1);
+    });
+    it('Should get all, but only foo', function () {
+      expect($('#test').dataDashFoo()).to.eql([{stuff: 'asdf', bar: 1}]);
+    });
+  });
+});
+
