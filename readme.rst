@@ -60,7 +60,7 @@ arguments.
   dom elements, or a string name.
 * [Optional] Data to be stored if a string name was used.
   Can be a function that gets called with the elment as this, and the
-  index of the element in the selection as the first argument.
+  element, index, and the entire selection as the arguments.
 
 If there is both a name and data the function sets the appropriate data
 on the dom and returns the selected elements.  If a name is given but no data
